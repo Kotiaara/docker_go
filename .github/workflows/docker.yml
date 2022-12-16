@@ -20,7 +20,7 @@ jobs:
         with:
           go-version: 1.19.2
 
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Fetch required Go modules
@@ -29,8 +29,13 @@ jobs:
       - name: Build
         run:  go build -v ./...
 
+      - name: Build the docker image
+        run: docker build -t kotiaara/go .  
+
+      - name: Conteiner
+        run: docker run -d kotiaara/go
+
       - name: Build and push Docker image
-        id:   docker_build
         uses: docker/build-push-action@v3
         with:
           push: true
