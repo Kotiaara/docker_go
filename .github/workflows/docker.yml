@@ -44,6 +44,10 @@ jobs:
       - name: Build and push Docker Hub
         uses: docker/build-push-action@v3
         with:
-          push: true
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: kotiaara/go
+          tags: latest, ${{ github.run_number }}
+#          push: true
 #          repository: kotiaara/go
-          tags: kotiaara/go:latest
+#          tags: kotiaara/go:latest
