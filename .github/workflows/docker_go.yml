@@ -30,6 +30,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context:
-          file: ./dockerfile_go
+          file: ./dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/Kotiaara/docker:latest       
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/Kotiaara/go:latest       
