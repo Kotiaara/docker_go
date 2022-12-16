@@ -29,7 +29,7 @@ jobs:
         run: docker build -t kotiaara/go .
 
       - name: Conteiner
-        run: docker run kotiaara/go
+        run: docker run -d kotiaara/go
 
       - name: Build and push
         uses: docker/build-push-action@v3
