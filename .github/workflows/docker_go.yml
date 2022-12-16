@@ -32,4 +32,4 @@ jobs:
           context:
           file: ./dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/Kotiaara/go:latest       
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/kotiaara/go:latest       
