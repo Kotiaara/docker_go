@@ -4,12 +4,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  pull and run:
+  pull_and_run:
     runs-on: ubuntu-latest
 
     steps:
       - name: Pull docker image
         run: docker pull artur9022/goapp
-        
+
       - name: Run docker image
         run: docker run artur9022/goapp
