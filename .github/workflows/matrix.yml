@@ -19,8 +19,3 @@ jobs:
         with:
           node-version: ${{ matrix.go_version }}
 
-      - uses: actions/checkout@v3
-
-      - name: Go
-        run: go run main.go     
-
