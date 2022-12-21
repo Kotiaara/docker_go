@@ -1,7 +1,7 @@
 name: matrix hello
 
 on:
-  wokflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   matrix_go:
