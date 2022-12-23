@@ -17,5 +17,5 @@ jobs:
       - name: Install go
         uses: actions/setup-go@v3
         with:
-          node-version: ${{ matrix.go_versions }}
+          go-version: ${{ matrix.go_versions }}
 
